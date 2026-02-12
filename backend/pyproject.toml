@@ -1,0 +1,20 @@
+[project]
+name = "mood-architect-backend"
+version = "0.1.0"
+description = "full-stack AI web app that generates personalized therapeutic affirmations"
+authors = [
+    {name = "Shobi s.oadisa.dev@gmail.com"}
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi (>=0.129.0,<0.130.0)",
+    "uvicorn (>=0.40.0,<0.41.0)",
+    "pydantic (>=2.12.5,<3.0.0)",
+    "dotenv (>=0.9.9,<0.10.0)",
+    "pydantic-settings (>=2.12.0,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
