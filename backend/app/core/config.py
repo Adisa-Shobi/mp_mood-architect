@@ -11,6 +11,11 @@ class Config(BaseSettings):
     debug: bool = os.environ.get("ENVIRONMENT", "production") == "development"
 
     @property
+    def allowed_origins(self) -> list[str]:
+        origins = os.environ.get("ALLOWED_ORIGINS", "")
+        return [o.strip() for o in origins.split(",") if o.strip()]
+
+    @property
     def openai_api_key(self):
         openai_api_key = os.environ.get("OPENAI_API_KEY", "")
         if not openai_api_key and self.debug:
