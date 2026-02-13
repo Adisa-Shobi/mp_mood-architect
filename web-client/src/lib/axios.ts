@@ -15,7 +15,7 @@ api.interceptors.response.use(
 		let message = "An error occurred";
 
 		if (error.response) {
-			message = error.response.data?.message || error.response.statusText;
+			message = error.response.data?.detail || error.response.statusText;
 		} else if (error.request) {
 			message = "Couldn't connect. Please check your network.";
 		}
