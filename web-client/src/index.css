@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+	--color-journal-paper: #fcfaf7;
+	--color-journal-ink: #3a3a3a;
+	--color-journal-muted: #8c8c8c;
+	--color-journal-border: #e5e1da;
+	--color-primary: #3dbebb;
+
+	--font-serif: "Crimson Pro", serif;
+	--font-sans: "Inter", sans-serif;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background-color: var(--color-journal-paper);
+	color: var(--color-journal-ink);
+	font-family: var(--font-serif);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.diary-input {
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid var(--color-journal-border);
+	padding: 0.5rem 0;
+	width: 100%;
+	font-size: 1.125rem;
+	font-style: italic;
+	font-family: var(--font-serif);
+	color: var(--color-journal-ink);
+	outline: none;
+	transition: border-color 0.3s;
+}
+
+.diary-input:focus {
+	border-color: var(--color-primary);
+}
+
+.diary-input::placeholder {
+	color: var(--color-journal-border);
+}
