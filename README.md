@@ -35,6 +35,26 @@ Screenshot of hosting provider env var settings (values hidden):
 ![Environment Variables Backend](./env-vars-screenshot01.png)
 ![Environment Variables Frontend](./env-vars-screenshot02.png)
 
+## Deployment
+
+### Backend (Railway)
+
+1. Create a new project on [Railway](https://railway.app/) and connect your GitHub repo
+2. Set the root directory to `backend`
+3. Railway will detect the Dockerfile automatically
+4. Add environment variables in the Railway dashboard:
+   - `OPENAI_API_KEY`
+   - `ENVIRONMENT`
+   - `ALLOWED_ORIGINS` -- set to your frontend's production URL
+
+### Frontend (Vercel)
+
+1. Import the repo on [Vercel](https://vercel.com/)
+2. Set the root directory to `web-client`
+3. Vercel will detect the Vite framework automatically
+4. Add the environment variable in the Vercel dashboard:
+   - `VITE_API_URL` -- set to your backend's production URL
+
 ## Next Steps / Improvements
 
 - Add agent evaluation using [Opik](https://www.comet.com/site/products/opik/)
